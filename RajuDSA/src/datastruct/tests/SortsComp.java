@@ -51,14 +51,14 @@ class SortsComp {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
+	
+	@Test
+	void mySetup(){
+		prepareTestData();
+	}
 
 	@Test
 	void testRightbs() {
-		prepareTestData();
-		for (int i=0;i<SortsComp.SIZE;i++) {
-			System.out.println(basket[i]);
-		}
-		
 		assertEquals(Arrays.toString(sbasket),Arrays.toString(bs.sort(basket)));
 	}
 	@Test
