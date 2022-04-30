@@ -21,17 +21,21 @@ class SortsComp {
 	SelectionSort ss=new SelectionSort();
 	
 	public static int LOWER=0, 
-				UPPER=200,
-				SIZE=100;
+				UPPER=200000,
+				SIZE=10000;
 	int basket[]=new int[SIZE];//= {10,9,8,7,6,5};
 	int sbasket[]= new int[SIZE];//={5,6,7,8,9,10};
 	
 	public void prepareTestData() {
 		//Generate RANDOM Array 
 				for (int i=0;i<SortsComp.SIZE;i++) {
-					basket[i]=ThreadLocalRandom.current().nextInt(SortsComp.LOWER,SortsComp.UPPER);
+					basket[i]= (int)(Math.random()*(UPPER-LOWER+1)+LOWER);//ThreadLocalRandom.current().nextInt(SortsComp.LOWER,SortsComp.UPPER);
 				}
+				System.out.println("Basket = " + Arrays.toString(basket));
+				System.out.println("new Basket before = " +Arrays.toString(sbasket));
 				sbasket=is.sort(basket);
+				System.out.println("new Basket after = " +Arrays.toString(sbasket));
+
 	}
 	
 	@BeforeAll
@@ -55,6 +59,7 @@ class SortsComp {
 	@Test
 	void mySetup(){
 		prepareTestData();
+		
 	}
 
 	@Test
