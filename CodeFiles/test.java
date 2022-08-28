@@ -1,11 +1,20 @@
 package CodeFiles;
-public class test {
-    public static void main(String[] args) {
 
-        double a= 120.12;
-        System.out.println(String.format("%2.0f", a));
-        //TODO an extra change 1.0
-        System.out.println("Feature1 added ");
-        System.out.println("Feature2 added ");
+import java.util.Scanner;
+import CodeFiles.MyClass;
+
+public class test{
+    public static void main(String[] arg){
+        String s2,s1,s;
+        s2="Abhishek is good";
+        s1="What about Raju? ";
+        int i=20;
+        s=s1+"   "+s2+i;
+       // System.out.println(s1+s2 +"What about Avisha's age = "+i);
+       Scanner myscanner =new Scanner(System.in);
+        System.out.println(s);
+        MyClass mc=new MyClass();
+        mc.i=30;
+        mc.printInt();
     }
 }
