@@ -5,16 +5,25 @@ import CodeFiles.MyClass;
 
 public class test{
     public static void main(String[] arg){
-        String s2,s1,s;
-        s2="Abhishek is good";
-        s1="What about Raju? ";
-        int i=20;
-        s=s1+"   "+s2+i;
-       // System.out.println(s1+s2 +"What about Avisha's age = "+i);
-       Scanner myscanner =new Scanner(System.in);
-        System.out.println(s);
-        MyClass mc=new MyClass();
-        mc.i=30;
-        mc.printInt();
-    }
+        // int a=2;
+        // int b=a++;
+        // int c=++a;
+        // System.out.println("b="+b+ "    c="+c);
+
+        int sum=0,i=0;
+        // while(i<10){
+        //     sum = sum+i;
+        //     i++;
+        // }
+        for(i=0;i<10;i++){ 
+        
+            for (int j=0;j<i;j++){
+           //     System.out.println ("i,j="+i+","+j);
+                System.out.print ("*");
+            }
+            System.out.println();
+        }
+
+    //    System.out.println("Sum ="+sum);
+    }   
 }
